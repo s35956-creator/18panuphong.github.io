@@ -2,35 +2,144 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน  </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>แฟ้มสะสมงานของฉัน</title>
 <style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+  body { 
+    font-family: 'Sarabun', sans-serif; 
+    background-color: #f4f7f6; 
+    text-align: center;
+    padding: 30px 15px; 
+    margin: 0;
+  }
+  .container { max-width: 800px; margin: 0 auto; }
+  
+  .profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    margin-bottom: 15px;
+  }
+
+  .project-card { 
+    background: white; 
+    padding: 20px; 
+    margin: 20px 0; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+    text-align: left; 
+    transition: transform 0.2s;
+  }
+  .project-card:hover {
+    transform: translateY(-3px);
+  }
+
+  /* ปุ่มกดสไตล์ต่างๆ */
+  .btn { 
+    display: inline-block; 
+    background: #2c3e50; 
+    color: white; 
+    padding: 10px 20px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    margin-top: 20px; 
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  .btn-detail {
+    background: #3498db;
+    margin-top: 10px;
+  }
+  .btn-detail:hover { background: #2980b9; }
+
+  /* สไตล์ของ ป๊อปอัป (Modal Window) */
+  dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 25px;
+    max-width: 500px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.6);
+  }
+  .close-btn {
+    background: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  .modal-img {
+    width: 100%;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
 </style>
 </head>
 <body>
+
 <div class="container">
-<h1> แฟ้มสะสมงาน  (Portfolio) ภานุพงษ์ บัวทอง</h1>
-<img src="images.jpg" alt="รูปโปรไฟล์ของฉัน" width="200">
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชิ้นที่  1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงาน  : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+  <h1>แฟ้มสะสมงาน (Portfolio)</h1>
+  <h2>ภานุพงษ์ บัวทอง</h2>
+  <img src="images.jpg" alt="รูปโปรไฟล์ของฉัน" class="profile-img">
+  <p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
+
+  <!-- กล่องผลงานชิ้นที่ 1 -->
+  <div class="project-card">
+    <h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ</h3>
+    <p>รายละเอียดโดยย่อเกี่ยวกับโครงงานและระบบที่พัฒนาขึ้น...</p>
+    <button class="btn btn-detail" onclick="openModal('modal1')">🔍 กดดูรายละเอียด</button>
+  </div>
+
+  <!-- กล่องผลงานชิ้นที่ 2 -->
+  <div class="project-card">
+    <h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
+    <p>เข้าร่วมการประกวด แข่งขัน หรือกิจกรรมของโรงเรียน...</p>
+    <button class="btn btn-detail" onclick="openModal('modal2')">🔍 กดดูเกียรติบัตร/รายละเอียด</button>
+  </div>
+
+  <!-- ปุ่มกดกลับหน้าแรก -->
+  <a href="index.html" class="btn">🏠 กลับหน้าแรก</a>
 </div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงาน  : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-</div>
+
+<!-- หน้าต่าง ป๊อปอัป ชิ้นที่ 1 -->
+<dialog id="modal1">
+  <h2>รายละเอียดโครงงานวิทยาศาสตร์คำนวณ</h2>
+  <hr>
+  <p><strong>สิ่งที่ได้ทำ:</strong> เขียนโปรแกรมคำนวณและประมวลผลข้อมูลด้วยภาษา Python/HTML</p>
+  <p><strong>สิ่งที่ได้เรียนรู้:</strong> ได้ฝึกกระบวนการคิดเชิงคำนวณ การแก้ปัญหาอย่างเป็นระบบ และการใช้ Git ในการเก็บบันทึกโค้ด</p>
+  <!-- คุณสามารถใส่รูปตัวอย่างผลงานตรงนี้ได้ -->
+  <!-- <img src="project1-img.jpg" class="modal-img" alt="ภาพโครงงาน"> -->
+  <button class="close-btn" onclick="closeModal('modal1')">ปิดหน้าต่าง</button>
+</dialog>
+
+<!-- หน้าต่าง ป๊อปอัป ชิ้นที่ 2 -->
+<dialog id="modal2">
+  <h2>กิจกรรมและเกียรติบัตร</h2>
+  <hr>
+  <p><strong>กิจกรรม:</strong> ได้รับรางวัลเข้าร่วมการแข่งขันการเขียนโปรแกรมประจำปี</p>
+  <p><strong>รายละเอียด:</strong> ได้รับเกียรติบัตรฉลองความสำเร็จและฝึกฝนการทำงานร่วมกับผู้อื่นเป็นทีม</p>
+  <!-- คุณสามารถใส่รูปเกียรติบัตรตรงนี้ได้ -->
+  <!-- <img src="certificate.jpg" class="modal-img" alt="รูปเกียรติบัตร"> -->
+  <button class="close-btn" onclick="closeModal('modal2')">ปิดหน้าต่าง</button>
+</dialog>
+
+<!-- สคริปต์สั่งให้ ป๊อปอัป ทำงาน -->
+<script>
+  function openModal(id) {
+    document.getElementById(id).showModal();
+  }
+  function closeModal(id) {
+    document.getElementById(id).close();
+  }
+</script>
+
 </body>
 </html>
