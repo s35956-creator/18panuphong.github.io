@@ -19,7 +19,7 @@
             color: #f8fafc;
         }
 
-        /* Navigation Bar */
+        /* แถบ Navigation Bar ด้านบน */
         nav {
             position: fixed;
             top: 0;
@@ -56,18 +56,18 @@
             color: #38bdf8;
         }
 
-        /* Page Layout */
+        /* โครงสร้างแต่ละหน้า */
         section {
             min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            padding: 80px 20px 20px 20px;
+            padding: 100px 20px 40px 20px;
             text-align: center;
         }
 
-        /* Section 1: Hero */
+        /* หน้าที่ 1: ยินดีต้อนรับ */
         #home {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
@@ -91,7 +91,7 @@
             line-height: 1.6;
         }
 
-        /* Section 2: Profile */
+        /* หน้าที่ 2: ประวัติส่วนตัว */
         #profile {
             background-color: #1e293b;
         }
@@ -105,6 +105,18 @@
             max-width: 500px;
             width: 100%;
             text-align: left;
+        }
+
+        /* สไตล์รูปโปรไฟล์หน้าประวัติ */
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px auto;
+            display: block;
+            border: 3px solid #38bdf8;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         .card h2 {
@@ -126,7 +138,7 @@
             color: #94a3b8;
         }
 
-        /* Section 3: Portfolio */
+        /* หน้าที่ 3: แฟ้มสะสมงาน */
         #portfolio {
             background-color: #0f172a;
         }
@@ -134,20 +146,21 @@
         #portfolio h2 {
             font-size: 2.5rem;
             color: #38bdf8;
-            margin-bottom: 30px;
+            margin-bottom: 10px;
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
             width: 100%;
             max-width: 1000px;
+            margin-top: 20px;
         }
 
         .portfolio-card {
             background: #1e293b;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
             border: 1px solid #334155;
             transition: transform 0.3s ease;
@@ -160,7 +173,19 @@
 
         .portfolio-card h3 {
             color: #f8fafc;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* สไตล์รูปภาพเกียรติบัตร / ผลงาน */
+        .portfolio-img {
+            width: 100%;
+            max-width: 350px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 15px auto;
+            border: 1px solid #334155;
         }
 
         .portfolio-card p {
@@ -191,8 +216,7 @@
 
     <!-- หน้าที่ 1: ต้อนรับ -->
     <section id="home">
-        <h1>ยินดีต้อนรับสู่
-      <img src="profile.jpg" width="70" height="70" alt="รูปโปรไฟล์">
+        <h1>ยินดีต้อนรับสู่</h1>
         <h2>โปรไฟล์ของฉัน</h2>
         <p>สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong) ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science & Engineering</p>
     </section>
@@ -200,6 +224,9 @@
     <!-- หน้าที่ 2: ประวัติส่วนตัว -->
     <section id="profile">
         <div class="card">
+            <!-- หากต้องการใส่รูปส่วนตัว ให้เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปภาพของคุณ -->
+            <img src="profile.jpg" alt="รูปโปรไฟล์ ภานุพงศ์" class="profile-img">
+            
             <h2>ประวัติส่วนตัว</h2>
             <div class="info-item">
                 <strong>ชื่อ-นามสกุล:</strong> นาย ภานุพงษ์ บัวทอง
@@ -208,7 +235,7 @@
                 <strong>ชื่อเล่น:</strong> ไอซ์
             </div>
             <div class="info-item">
-                <strong>วันเกิด:</strong> 11 กันยายน 2551 (11/09/51)
+                <strong>วันเกิด:</strong> 11/09/51
             </div>
             <div class="info-item">
                 <strong>ความสนใจ:</strong> วิทยาการคอมพิวเตอร์และวิศวกรรม (Computer Science & Engineering)
@@ -219,31 +246,12 @@
     <!-- หน้าที่ 3: แฟ้มสะสมงาน -->
     <section id="portfolio">
         <h2>แฟ้มสะสมงาน</h2>
-        <p style="color: #94a3b8; margin-bottom: 30px;">ผลงานและโปรเจกต์ของ ภานุพงศ์ บัวทอง</p>
+        <p style="color: #94a3b8;">ภานุพงศ์ บัวทอง</p>
         
         <div class="portfolio-grid">
             <div class="portfolio-card">
-                <h3>📁 โปรเจกต์ที่ 1</h3>
-                <p>คำอธิบายผลงานของคุณ สามารถใส่รายละเอียดของโปรเจกต์หรือผลงานที่เคยทำได้ที่นี่</p>
-        .portfolio-img {
-            width: 100%;
-            max-width: 350px;
-            height: 220px;
-            object-fit: cover;
-            border-radius: 8px;
-            display: block;
-            margin: 0 auto 15px auto;
-        }
-            </div>
-            <div class="portfolio-card">
-                <h3>📁 โปรเจกต์ที่ 2</h3>
-                <p>คำอธิบายผลงาน ภาษาโปรแกรม หรือเทคโนโลยีที่ใช้ในการพัฒนา</p>
-            </div>
-            <div class="portfolio-card">
                 <h3>🏆 กิจกรรม / เกียรติบัตร</h3>
-                <div class="portfolio-card">
-    <!-- เพิ่มรูปผลงาน/โปรเจกต์ตรงนี้ -->
-    <img src="37584.jpg" alt="เกียรติบัตร" class="portfolio-img">
+                <img src="37584.jpg" alt="เกียรติบัตร" class="portfolio-img">
                 <p>เกียรติบัตรเข้าร่วมนิทรรศการและกิจกรรมด้านเทคโนโลยี</p>
             </div>
         </div>
