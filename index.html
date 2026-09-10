@@ -2,328 +2,35 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ภานุพงศ์ บัวทอง | Profile</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<meta viewport="width=device-width, initial-scale=1.0">
+<title>แฟ้มสะสมงานของฉัน  </title>
 <style>
-  :root{
-    --navy-deep:#081226;
-    --navy:#0d1c3a;
-    --navy-card:#101f42;
-    --blue:#2f6fed;
-    --blue-bright:#4f8bff;
-    --cyan:#3fd6e0;
-    --ink:#eef2fb;
-    --ink-soft:#9fb0d1;
-    --line: rgba(143,175,255,0.18);
-  }
-  *{box-sizing:border-box;}
-  html,body{margin:0;padding:0;}
-  body{
-    background:
-      radial-gradient(1100px 600px at 12% -10%, rgba(47,111,237,0.25), transparent 60%),
-      radial-gradient(900px 500px at 100% 0%, rgba(63,214,224,0.12), transparent 55%),
-      var(--navy-deep);
-    color:var(--ink);
-    font-family:'Prompt', sans-serif;
-    font-weight:300;
-    min-height:100vh;
-    -webkit-font-smoothing:antialiased;
-  }
-  .circuit{
-    position:fixed; inset:0; z-index:0; pointer-events:none; opacity:0.5;
-  }
-  .wrap{
-    position:relative; z-index:1;
-    max-width:920px; margin:0 auto; padding:0 28px 80px;
-  }
-  header.top{
-    position:sticky; top:0; z-index:5;
-    backdrop-filter: blur(10px);
-    background:rgba(8,18,38,0.72);
-    border-bottom:1px solid var(--line);
-  }
-  .topbar{
-    max-width:920px; margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between;
-    padding:18px 28px;
-  }
-  .brand{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600; font-size:16px; letter-spacing:0.02em;
-    color:var(--ink);
-    display:flex; align-items:center; gap:10px;
-  }
-  .brand-dot{
-    width:9px; height:9px; border-radius:50%;
-    background:var(--cyan);
-    box-shadow:0 0 12px var(--cyan);
-  }
-  nav.tabs{ display:flex; gap:6px; }
-  nav.tabs button{
-    font-family:'Prompt', sans-serif;
-    font-size:15px; font-weight:400;
-    background:transparent; border:1px solid transparent;
-    color:var(--ink-soft);
-    padding:8px 16px; border-radius:8px;
-    cursor:pointer;
-    transition:color .2s ease, border-color .2s ease, background .2s ease;
-  }
-  nav.tabs button:hover{ color:var(--ink); }
-  nav.tabs button.active{
-    color:var(--ink);
-    border-color:var(--line);
-    background:rgba(79,139,255,0.10);
-  }
-  nav.tabs button:focus-visible, a:focus-visible, .cert-frame:focus-visible{
-    outline:2px solid var(--cyan); outline-offset:3px;
-  }
-
-  /* ---------- PAGE: HOME ---------- */
-  section.page{ display:none; }
-  section.page.active{ display:block; }
-
-  .hero{
-    min-height:calc(100vh - 66px);
-    display:flex; flex-direction:column; justify-content:center;
-    padding:60px 0;
-  }
-  .eyebrow{
-    font-family:'Space Grotesk', sans-serif;
-    font-size:13px; color:var(--cyan);
-    letter-spacing:0.04em;
-    margin:0 0 18px;
-  }
-  .hero h1{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    font-size:clamp(34px, 6vw, 58px);
-    line-height:1.12;
-    margin:0 0 22px;
-    color:var(--ink);
-    max-width:14ch;
-  }
-  .hero h1 span{
-    color:var(--blue-bright);
-  }
-  .hero p.lead{
-    font-size:19px; line-height:1.75;
-    color:var(--ink-soft);
-    max-width:52ch;
-    margin:0 0 30px;
-  }
-  .field-tag{
-    display:inline-flex; align-items:center; gap:10px;
-    border:1px solid var(--line);
-    border-radius:10px;
-    padding:12px 18px;
-    font-size:15px;
-    color:var(--ink);
-    background:rgba(16,31,66,0.55);
-  }
-  .field-tag svg{ flex-shrink:0; }
-
-  .signal-row{
-    margin-top:56px;
-    display:grid; grid-template-columns:repeat(3,1fr);
-    gap:1px;
-    background:var(--line);
-    border:1px solid var(--line);
-    border-radius:14px;
-    overflow:hidden;
-  }
-  .signal{
-    background:var(--navy-card);
-    padding:20px 22px;
-  }
-  .signal .num{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600; font-size:22px; color:var(--ink);
-  }
-  .signal .lbl{
-    font-size:13px; color:var(--ink-soft); margin-top:4px;
-  }
-
-  /* ---------- PAGE: PORTFOLIO ---------- */
-  .page-head{ padding:56px 0 8px; }
-  .page-head .eyebrow{ margin-bottom:14px; }
-  .page-head h1{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:700;
-    font-size:clamp(28px, 4.4vw, 40px);
-    margin:0 0 14px;
-    color:var(--ink);
-  }
-  .page-head p{
-    color:var(--ink-soft); font-size:16px; line-height:1.7;
-    max-width:60ch; margin:0 0 10px;
-  }
-
-  .cert-card{
-    margin-top:36px;
-    border:1px solid var(--line);
-    border-radius:16px;
-    background:linear-gradient(180deg, rgba(16,31,66,0.6), rgba(13,28,58,0.4));
-    overflow:hidden;
-  }
-  .cert-frame{
-    padding:22px; border-bottom:1px solid var(--line);
-    background:
-      radial-gradient(600px 200px at 50% -20%, rgba(47,111,237,0.18), transparent 70%);
-  }
-  .cert-frame img{
-    width:100%; height:auto; display:block;
-    border-radius:8px;
-    box-shadow:0 20px 50px -20px rgba(0,0,0,0.6);
-  }
-  .cert-body{ padding:28px 30px 32px; }
-  .cert-title{
-    font-family:'Space Grotesk', sans-serif;
-    font-weight:600; font-size:19px;
-    color:var(--ink); margin:0 0 6px;
-  }
-  .cert-meta{
-    font-size:13.5px; color:var(--cyan);
-    margin:0 0 18px;
-  }
-  .cert-body p{
-    font-size:15.5px; line-height:1.85;
-    color:var(--ink-soft);
-    margin:0 0 14px;
-  }
-  .cert-body p:last-child{ margin-bottom:0; }
-  .cert-body strong{ color:var(--ink); font-weight:500; }
-
-  .detail-grid{
-    margin-top:22px;
-    display:grid; grid-template-columns:1fr 1fr;
-    gap:14px 24px;
-    border-top:1px solid var(--line);
-    padding-top:20px;
-  }
-  .detail-grid .d-lbl{ font-size:12.5px; color:var(--ink-soft); margin-bottom:3px;}
-  .detail-grid .d-val{ font-size:15px; color:var(--ink); }
-
-  footer.site{
-    text-align:center; padding:40px 0 10px;
-    color:var(--ink-soft); font-size:13px;
-  }
-
-  /* ---------- PAGE: ABOUT ---------- */
-  .about-card{
-    margin-top:36px;
-    border:1px solid var(--line);
-    border-radius:16px;
-    background:linear-gradient(180deg, rgba(16,31,66,0.6), rgba(13,28,58,0.4));
-    padding:8px 0 6px;
-    overflow:hidden;
-  }
-  .about-row{
-    display:flex; align-items:center; justify-content:space-between;
-    gap:20px;
-    padding:20px 30px;
-    border-bottom:1px solid var(--line);
-  }
-  .about-row:last-child{ border-bottom:none; }
-  .about-row .a-lbl{
-    font-size:14px; color:var(--ink-soft);
-    flex-shrink:0;
-  }
-  .about-row .a-val{
-    font-family:'Space Grotesk', sans-serif;
-    font-size:16.5px; color:var(--ink);
-    text-align:right;
-  }
-  .hobby-tags{
-    display:flex; gap:8px; flex-wrap:wrap; justify-content:flex-end;
-  }
-  .hobby-tags span{
-    border:1px solid var(--line);
-    background:rgba(79,139,255,0.10);
-    color:var(--ink);
-    font-size:13.5px;
-    padding:6px 13px;
-    border-radius:20px;
-  }
-  @media (max-width:640px){
-    .about-row{
-      flex-direction:column; align-items:flex-start; gap:8px;
-      padding:18px 18px;
-    }
-    .about-row .a-val{ text-align:left; }
-    .hobby-tags{ justify-content:flex-start; }
-  }
-
-  @media (max-width:640px){
-    .topbar{ padding:14px 18px; }
-    .wrap{ padding:0 18px 60px; }
-    nav.tabs button{ padding:7px 12px; font-size:14px; }
-    .signal-row{ grid-template-columns:1fr; }
-    .detail-grid{ grid-template-columns:1fr; }
-    .cert-frame{ padding:14px; }
-    .cert-body{ padding:22px 18px 26px; }
-  }
+body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
+padding: 30px; }
+.container { max-width: 800px; margin: 0 auto; }
+.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
+8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
+.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
+20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
 </style>
 </head>
 <body>
-<img src="37584.jpg"alt="เกียรติบัตร: เข้าร่วมนิทรรศการและกิจกรรมด้านเทคโนโลยี Smart and Safe Digital Life"
-          loading="lazy">
-      </div>
-      <div class="cert-body">
-        <h2 class="cert-title">เกียรติบัตรเข้าร่วมนิทรรศการและกิจกรรมด้านเทคโนโลยี</h2>
-        <p class="cert-meta">Smart and Safe Digital Life · 20 สิงหาคม 2569</p>
-
-        <p>
-          เกียรติบัตรฉบับนี้มอบโดย <strong>โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</strong>
-          ลงนามรับรองโดย <strong>ดร.รุ่งทวี พรรณา</strong> ผู้อำนวยการโรงเรียน
-          เพื่อแสดงว่า <strong>นายภานุพงศ์ บัวทอง</strong> ได้เข้าร่วมนิทรรศการและกิจกรรม
-          ด้านเทคโนโลยีภายใต้หัวข้อ "Smart and Safe Digital Life"
-          ซึ่งจัดขึ้นเนื่องในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ประจำปีการศึกษา 2569
-        </p>
-        <p>
-          กิจกรรมนี้มุ่งส่งเสริมให้ผู้เข้าร่วมมีความรู้ความเข้าใจด้านวิทยาศาสตร์ เทคโนโลยี
-          และการใช้ชีวิตดิจิทัลอย่างปลอดภัยและชาญฉลาด สอดคล้องกับความสนใจของภานุพงศ์
-          ในสาย Computer Science &amp; Engineering และเป็นหลักฐานยืนยันความมุ่งมั่น
-          ในการพัฒนาตนเองด้านวิทยาศาสตร์ เทคโนโลยี และนวัตกรรมอย่างต่อเนื่อง
-        </p>
-
-        <div class="detail-grid">
-          <div>
-            <div class="d-lbl">ผู้ได้รับเกียรติบัตร</div>
-            <div class="d-val">นายภานุพงศ์ บัวทอง</div>
-          </div>
-          <div>
-            <div class="d-lbl">หน่วยงานผู้มอบ</div>
-            <div class="d-val">โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"</div>
-          </div>
-          <div>
-            <div class="d-lbl">กิจกรรม</div>
-            <div class="d-val">Smart and Safe Digital Life</div>
-          </div>
-          <div>
-            <div class="d-lbl">วันที่ออกเกียรติบัตร</div>
-            <div class="d-val">20 สิงหาคม 2569</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <footer class="site">© 2569 ภานุพงศ์ บัวทอง — Computer Science &amp; Engineering</footer>
-</main>
-
-<script>
-  function showPage(name){
-    document.getElementById('page-home').classList.toggle('active', name==='home');
-    document.getElementById('page-about').classList.toggle('active', name==='about');
-    document.getElementById('page-portfolio').classList.toggle('active', name==='portfolio');
-    document.getElementById('btn-home').classList.toggle('active', name==='home');
-    document.getElementById('btn-about').classList.toggle('active', name==='about');
-    document.getElementById('btn-portfolio').classList.toggle('active', name==='portfolio');
-    window.scrollTo(0,0);
-  }
-</script>
+<div class="container">
+<h1> แฟ้มสะสมงาน  (Portfolio) ภานุพงษ์ บัวทอง</h1>
+<img src="images.jpg" alt="รูปโปรไฟล์ของฉัน" width="200">
+<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
+<!-- กล่องผลงานชิ้นที่  1 -->
+<div class="project-card">
+<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
+<p>รายละเอียดชิ้นงาน  : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง  </p>
+</div>
+<!-- กล่องผลงานชนที่ ้ิ 2 -->
+<div class="project-card">
+<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
+<p>รายละเอียดชิ้นงาน  : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
+</div>
+<!-- ปุ่มกดกลับหน้าแรก -->
+<a href="index.html" class="btn"> กลับหน้าแรก</a>
+</div>
 </body>
 </html>
