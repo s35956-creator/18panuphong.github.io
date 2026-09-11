@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>หน้าแรก - ภานุพงศ์ บัวทอง</title>
+    <title>โปรไฟล์ของฉัน - ภานุพงศ์ บัวทอง</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
@@ -14,12 +14,15 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'Kanit', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background: #0f172a;
+            background-color: #0f172a;
             color: #f8fafc;
         }
+
+        /* ================= NAVBAR ================= */
 
         nav {
             position: fixed;
@@ -57,14 +60,19 @@
             color: #38bdf8;
         }
 
+        /* ================= SECTION ================= */
+
         section {
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
             padding: 100px 20px 40px;
+            text-align: center;
         }
+
+        /* ================= HOME ================= */
 
         #home {
             background: linear-gradient(
@@ -86,50 +94,101 @@
         }
 
         #home p {
-            max-width: 600px;
+            font-size: 1.2rem;
             color: #cbd5e1;
-            font-size: 1.1rem;
-            line-height: 1.8;
+            max-width: 600px;
+            line-height: 1.6;
         }
+
+        /* ================= BUTTON ================= */
 
         .button-group {
             display: flex;
             gap: 15px;
-            justify-content: center;
+            margin-top: 25px;
             flex-wrap: wrap;
-            margin-top: 30px;
+            justify-content: center;
         }
 
-        .btn {
-            padding: 13px 28px;
-            border-radius: 10px;
+        .portfolio-btn,
+        .goal-btn {
+            display: inline-block;
+            padding: 13px 30px;
             text-decoration: none;
+            border-radius: 10px;
             font-weight: 600;
             transition: 0.3s;
         }
 
-        .profile-btn {
+        .portfolio-btn {
             background: #38bdf8;
             color: #0f172a;
         }
 
-        .goal-btn {
-            border: 1px solid #38bdf8;
-            color: #38bdf8;
-        }
-
-        .btn:hover {
+        .portfolio-btn:hover {
+            background: #7dd3fc;
             transform: translateY(-3px);
         }
 
-        .profile-btn:hover {
-            background: #7dd3fc;
+        .goal-btn {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
         }
 
         .goal-btn:hover {
             background: #38bdf8;
             color: #0f172a;
+            transform: translateY(-3px);
         }
+
+        /* ================= PROFILE ================= */
+
+        #profile {
+            background-color: #1e293b;
+        }
+
+        .card {
+            background: #0f172a;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+            max-width: 500px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid #38bdf8;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: #38bdf8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-item {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .info-item strong {
+            color: #94a3b8;
+        }
+
+        /* ================= FOOTER ================= */
 
         footer {
             text-align: center;
@@ -138,7 +197,10 @@
             color: #64748b;
         }
 
+        /* ================= MOBILE ================= */
+
         @media (max-width: 700px) {
+
             nav {
                 flex-direction: column;
                 gap: 10px;
@@ -157,11 +219,17 @@
             #home h2 {
                 font-size: 1.6rem;
             }
+
+            .card {
+                padding: 25px;
+            }
         }
     </style>
 </head>
 
 <body>
+
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
@@ -170,43 +238,97 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="profile.html">ประวัติส่วนตัว</a></li>
-            <li><a href="goal.html">เป้าหมาย</a></li>
-            <li><a href="portfolio.html">แฟ้มสะสมงาน</a></li>
+
+            <li>
+                <a href="#home">หน้าแรก</a>
+            </li>
+
+            <li>
+                <a href="#profile">ประวัติส่วนตัว</a>
+            </li>
+
+            <li>
+                <a href="goal.html">เป้าหมาย</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">แฟ้มสะสมงาน</a>
+            </li>
+
         </ul>
 
     </nav>
 
 
+    <!-- ================= HOME ================= -->
+
     <section id="home">
 
-        <div>
+        <h1>
+            ยินดีต้อนรับสู่
+        </h1>
 
-            <h1>
-                ยินดีต้อนรับสู่
-            </h1>
+        <h2>
+            โปรไฟล์ของฉัน
+        </h2>
+
+        <p>
+            สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
+            ขณะนี้กำลังศึกษา/สนใจด้าน
+            Computer Science & Engineering
+        </p>
+
+
+        <div class="button-group">
+
+            <a href="goal.html" class="goal-btn">
+                🎯 เป้าหมายของฉัน
+            </a>
+
+            <a href="portfolio.html" class="portfolio-btn">
+                📁 เข้าดูแฟ้มผลงาน
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PROFILE ================= -->
+
+    <section id="profile">
+
+        <div class="card">
+
+            <img
+                src="images.jpg"
+                alt="รูปโปรไฟล์ ภานุพงศ์"
+                class="profile-img"
+            >
 
             <h2>
-                โปรไฟล์ของฉัน
+                ประวัติส่วนตัว
             </h2>
 
-            <p>
-                สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
-                ขณะนี้กำลังศึกษาและสนใจด้าน
-                Computer Science & Engineering
-            </p>
+            <div class="info-item">
+                <strong>ชื่อ-นามสกุล:</strong>
+                นาย ภานุพงศ์ บัวทอง
+            </div>
 
-            <div class="button-group">
+            <div class="info-item">
+                <strong>ชื่อเล่น:</strong>
+                ไอซ์
+            </div>
 
-                <a href="profile.html" class="btn profile-btn">
-                    👤 ดูประวัติส่วนตัว
-                </a>
+            <div class="info-item">
+                <strong>วันเกิด:</strong>
+                11/09/51
+            </div>
 
-                <a href="goal.html" class="btn goal-btn">
-                    🎯 ดูเป้าหมาย
-                </a>
-
+            <div class="info-item">
+                <strong>ความสนใจ:</strong>
+                วิทยาการคอมพิวเตอร์และวิศวกรรม
+                (Computer Science & Engineering)
             </div>
 
         </div>
@@ -214,8 +336,14 @@
     </section>
 
 
+    <!-- ================= FOOTER ================= -->
+
     <footer>
-        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
+
+        <p>
+            &copy; ภานุพงศ์ บัวทอง - All Rights Reserved
+        </p>
+
     </footer>
 
 </body>
