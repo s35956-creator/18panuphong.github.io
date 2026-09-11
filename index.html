@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>โปรไฟล์ของฉัน - ภานุพงศ์ บัวทอง</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -19,7 +21,7 @@
             color: #f8fafc;
         }
 
-        /* แถบ Navigation Bar ด้านบน */
+        /* Navigation Bar */
         nav {
             position: fixed;
             top: 0;
@@ -56,7 +58,7 @@
             color: #38bdf8;
         }
 
-        /* โครงสร้างแต่ละหน้า */
+        /* แต่ละ Section */
         section {
             min-height: 100vh;
             display: flex;
@@ -67,7 +69,7 @@
             text-align: center;
         }
 
-        /* หน้าที่ 1: ยินดีต้อนรับ */
+        /* หน้าแรก */
         #home {
             background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
         }
@@ -91,7 +93,25 @@
             line-height: 1.6;
         }
 
-        /* หน้าที่ 2: ประวัติส่วนตัว */
+        /* ปุ่มเข้าดูแฟ้มผลงาน */
+        .portfolio-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .portfolio-btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        /* ประวัติส่วนตัว */
         #profile {
             background-color: #1e293b;
         }
@@ -107,7 +127,6 @@
             text-align: left;
         }
 
-        /* สไตล์รูปโปรไฟล์หน้าประวัติ */
         .profile-img {
             width: 150px;
             height: 150px;
@@ -138,7 +157,7 @@
             color: #94a3b8;
         }
 
-        /* หน้าที่ 3: แฟ้มสะสมงาน */
+        /* แฟ้มสะสมงาน */
         #portfolio {
             background-color: #0f172a;
         }
@@ -176,7 +195,6 @@
             margin-bottom: 15px;
         }
 
-        /* สไตล์รูปภาพเกียรติบัตร / ผลงาน */
         .portfolio-img {
             width: 100%;
             max-width: 350px;
@@ -193,6 +211,7 @@
             font-size: 0.95rem;
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 20px;
@@ -200,13 +219,40 @@
             color: #64748b;
             font-size: 0.9rem;
         }
+
+        /* สำหรับมือถือ */
+        @media (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+
+            #home h1 {
+                font-size: 2rem;
+            }
+
+            #home h2 {
+                font-size: 1.6rem;
+            }
+
+            .card {
+                padding: 25px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
-    <!-- แถบเมนูด้านบน -->
+    <!-- Navigation Bar -->
     <nav>
         <div class="logo">Panupong.Dev</div>
+
         <ul class="nav-links">
             <li><a href="#home">หน้าแรก</a></li>
             <li><a href="#profile">ประวัติส่วนตัว</a></li>
@@ -214,62 +260,120 @@
         </ul>
     </nav>
 
-    <!-- หน้าที่ 1: ต้อนรับ -->
+
+    <!-- หน้าแรก -->
     <section id="home">
+
         <h1>ยินดีต้อนรับสู่</h1>
+
         <h2>โปรไฟล์ของฉัน</h2>
-        <p>สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong) ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science & Engineering</p>
+
+        <p>
+            สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
+            ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science & Engineering
+        </p>
+
+        <!-- ปุ่มเข้าดูแฟ้มผลงาน -->
+        <a href="#portfolio" class="portfolio-btn">
+            📁 เข้าดูแฟ้มผลงาน
+        </a>
+
     </section>
 
-    <!-- หน้าที่ 2: ประวัติส่วนตัว -->
+
+    <!-- ประวัติส่วนตัว -->
     <section id="profile">
+
         <div class="card">
-            <!-- หากต้องการใส่รูปส่วนตัว ให้เปลี่ยน profile.jpg เป็นชื่อไฟล์รูปภาพของคุณ -->
-            <img src="images.jpg" alt="รูปโปรไฟล์ ภานุพงศ์" class="profile-img">
-            
+
+            <img src="images.jpg"
+                 alt="รูปโปรไฟล์ ภานุพงศ์"
+                 class="profile-img">
+
             <h2>ประวัติส่วนตัว</h2>
+
             <div class="info-item">
-                <strong>ชื่อ-นามสกุล:</strong> นาย ภานุพงษ์ บัวทอง
+                <strong>ชื่อ-นามสกุล:</strong>
+                นาย ภานุพงศ์ บัวทอง
             </div>
+
             <div class="info-item">
-                <strong>ชื่อเล่น:</strong> ไอซ์
+                <strong>ชื่อเล่น:</strong>
+                ไอซ์
             </div>
+
             <div class="info-item">
-                <strong>วันเกิด:</strong> 11/09/51
+                <strong>วันเกิด:</strong>
+                11/09/51
             </div>
+
             <div class="info-item">
-                <strong>ความสนใจ:</strong> วิทยาการคอมพิวเตอร์และวิศวกรรม (Computer Science & Engineering)
+                <strong>ความสนใจ:</strong>
+                วิทยาการคอมพิวเตอร์และวิศวกรรม
+                (Computer Science & Engineering)
             </div>
+
         </div>
+
     </section>
 
-    <!-- หน้าที่ 3: แฟ้มสะสมงาน -->
+
+    <!-- แฟ้มสะสมงาน -->
     <section id="portfolio">
+
         <h2>แฟ้มสะสมงาน</h2>
-        <p style="color: #94a3b8;">ภานุพงศ์ บัวทอง</p>
-        
+
+        <p style="color: #94a3b8;">
+            ภานุพงศ์ บัวทอง
+        </p>
+
         <div class="portfolio-grid">
+
+            <!-- ผลงานที่ 1 -->
             <div class="portfolio-card">
+
                 <h3>🏆 กิจกรรม / เกียรติบัตร</h3>
-                <img src="37584.jpg" alt="เกียรติบัตร" class="portfolio-img">
-                <p>เกียรติบัตรเข้าร่วมนิทรรศการและกิจกรรมด้านเทคโนโลยี</p>
-        
-        
+
+                <img src="37584.jpg"
+                     alt="เกียรติบัตร"
+                     class="portfolio-img">
+
+                <p>
+                    เกียรติบัตรเข้าร่วมนิทรรศการ
+                    และกิจกรรมด้านเทคโนโลยี
+                </p>
+
             </div>
-        </div>
-    </section>
- <div class="portfolio-grid">
+
+
+            <!-- ผลงานที่ 2 -->
             <div class="portfolio-card">
+
                 <h3>🏆 กิจกรรม / เกียรติบัตร</h3>
-                <img src="37862.jpg" alt="เกียรติบัตร" class="portfolio-img">
-                <p>เกียรติบัตรเข้าร่วมนิทรรศการและกิจกรรมด้านเทคโนโลยี</p>
-        
-        
+
+                <img src="37862.jpg"
+                     alt="เกียรติบัตร"
+                     class="portfolio-img">
+
+                <p>
+                    เกียรติบัตรเข้าร่วมนิทรรศการ
+                    และกิจกรรมด้านเทคโนโลยี
+                </p>
+
             </div>
+
         </div>
+
     </section>
+
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
+
+        <p>
+            &copy; ภานุพงศ์ บัวทอง - All Rights Reserved
+        </p>
+
     </footer>
 
 </body>
