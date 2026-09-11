@@ -102,20 +102,43 @@
 
         /* ================= BUTTON ================= */
 
-        .portfolio-btn {
-            display: inline-block;
+        .button-group {
+            display: flex;
+            gap: 15px;
             margin-top: 25px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .portfolio-btn,
+        .goal-btn {
+            display: inline-block;
             padding: 13px 30px;
-            background: #38bdf8;
-            color: #0f172a;
             text-decoration: none;
             border-radius: 10px;
             font-weight: 600;
             transition: 0.3s;
         }
 
+        .portfolio-btn {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
         .portfolio-btn:hover {
             background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        .goal-btn {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        .goal-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
             transform: translateY(-3px);
         }
 
@@ -165,70 +188,6 @@
             color: #94a3b8;
         }
 
-        /* ================= GOAL ================= */
-
-        #goal {
-            background: linear-gradient(
-                135deg,
-                #0f172a 0%,
-                #172554 100%
-            );
-        }
-
-        .goal-container {
-            max-width: 1000px;
-            width: 100%;
-        }
-
-        .goal-container h1 {
-            font-size: 2.5rem;
-            color: #38bdf8;
-            margin-bottom: 10px;
-        }
-
-        .goal-description {
-            color: #cbd5e1;
-            font-size: 1.1rem;
-            margin-bottom: 40px;
-        }
-
-        .goal-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .goal-card {
-            background: #0f172a;
-            border: 1px solid #334155;
-            border-radius: 16px;
-            padding: 30px 20px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
-            transition: 0.3s;
-        }
-
-        .goal-card:hover {
-            transform: translateY(-8px);
-            border-color: #38bdf8;
-            box-shadow: 0 15px 30px rgba(56,189,248,0.15);
-        }
-
-        .goal-icon {
-            font-size: 3rem;
-            margin-bottom: 15px;
-        }
-
-        .goal-card h2 {
-            color: #38bdf8;
-            font-size: 1.4rem;
-            margin-bottom: 12px;
-        }
-
-        .goal-card p {
-            color: #cbd5e1;
-            line-height: 1.7;
-        }
-
         /* ================= FOOTER ================= */
 
         footer {
@@ -238,7 +197,7 @@
             color: #64748b;
         }
 
-        /* ================= RESPONSIVE ================= */
+        /* ================= MOBILE ================= */
 
         @media (max-width: 700px) {
 
@@ -261,14 +220,6 @@
                 font-size: 1.6rem;
             }
 
-            .goal-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .goal-container h1 {
-                font-size: 2rem;
-            }
-
             .card {
                 padding: 25px;
             }
@@ -278,7 +229,7 @@
 
 <body>
 
-    <!-- ================= NAVIGATION ================= -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
 
@@ -297,7 +248,7 @@
             </li>
 
             <li>
-                <a href="#goal">เป้าหมาย</a>
+                <a href="goal.html">เป้าหมาย</a>
             </li>
 
             <li>
@@ -327,9 +278,18 @@
             Computer Science & Engineering
         </p>
 
-        <a href="portfolio.html" class="portfolio-btn">
-            📁 เข้าดูแฟ้มผลงาน
-        </a>
+
+        <div class="button-group">
+
+            <a href="goal.html" class="goal-btn">
+                🎯 เป้าหมายของฉัน
+            </a>
+
+            <a href="portfolio.html" class="portfolio-btn">
+                📁 เข้าดูแฟ้มผลงาน
+            </a>
+
+        </div>
 
     </section>
 
@@ -369,51 +329,6 @@
                 <strong>ความสนใจ:</strong>
                 วิทยาการคอมพิวเตอร์และวิศวกรรม
                 (Computer Science & Engineering)
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= GOAL ================= -->
-
-    <section id="goal">
-
-        <div class="goal-container">
-
-            <h1>
-                🎯 เป้าหมายของฉัน
-            </h1>
-
-            <p class="goal-description">
-                เป้าหมายในการพัฒนาตนเองและการเรียนรู้
-                ด้าน Computer Science & Engineering
-            </p>
-
-
-            <div class="goal-grid">
-
-                <!-- เป้าหมาย -->
-
-                <div class="goal-card">
-
-                    <div class="goal-icon">
-                        📚
-                    </div>
-
-                    <h2>
-                        การศึกษาต่อ
-                    </h2>
-
-                    <p>
-                        ผมมีความสนใจและอยากศึกษาต่อที่มหาวิทยาลัยบูรพา เพราะเป็นมหาวิทยาลัยที่ผมมองว่าเหมาะกับความสนใจและเป้าหมายของผม โดยผมสนใจด้านคอมพิวเตอร์และเทคโนโลยี และอยากพัฒนาความรู้เกี่ยวกับการเขียนโปรแกรม รวมถึงการสร้างและพัฒนาซอฟต์แวร์
-ผมอยากใช้ช่วงเวลาที่เรียนมหาวิทยาลัยในการเรียนรู้สิ่งใหม่ ๆ และพัฒนาตัวเองให้มากขึ้น ทั้งด้านความรู้ การคิดวิเคราะห์ การแก้ปัญหา และการทำงานร่วมกับผู้อื่น ผมเชื่อว่าการได้เรียนในสภาพแวดล้อมที่ดีและได้ลงมือทำจริง จะช่วยให้ผมมีประสบการณ์และสามารถนำความรู้ไปต่อยอดในอนาคตได้
-ผมจึงอยากมีโอกาสเข้าศึกษาที่มหาวิทยาลัยบูรพา เพื่อพัฒนาตัวเองให้มีความรู้และทักษะที่มากขึ้น และนำสิ่งที่เรียนมาใช้สร้างผลงานที่เป็นประโยชน์ รวมถึงเตรียมตัวสำหรับการทำงานในสายคอมพิวเตอร์ในอนาคต
-                    </p>
-
-                </div>
-
             </div>
 
         </div>
