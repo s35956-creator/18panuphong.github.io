@@ -237,6 +237,209 @@
     </footer>
 
 </body>
+</html>
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px 40px;
+            text-align: center;
+        }
+
+        #home {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+        }
+
+        #home h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        #home h2 {
+            font-size: 2rem;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        #home p {
+            font-size: 1.2rem;
+            color: #cbd5e1;
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        /* ปุ่มไปหน้าแฟ้มผลงาน */
+        .portfolio-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 13px 30px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .portfolio-btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        #profile {
+            background-color: #1e293b;
+        }
+
+        .card {
+            background: #0f172a;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            border: 1px solid #334155;
+            max-width: 500px;
+            width: 100%;
+            text-align: left;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid #38bdf8;
+        }
+
+        .card h2 {
+            font-size: 2rem;
+            color: #38bdf8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .info-item {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #e2e8f0;
+            border-bottom: 1px solid #1e293b;
+            padding-bottom: 10px;
+        }
+
+        .info-item strong {
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #090d16;
+            color: #64748b;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- เมนู -->
+    <nav>
+        <div class="logo">Panupong.Dev</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">หน้าแรก</a></li>
+            <li><a href="#profile">ประวัติส่วนตัว</a></li>
+
+            <!-- กดแล้วไปอีกหน้า -->
+            <li><a href="portfolio.html">แฟ้มสะสมงาน</a></li>
+        </ul>
+    </nav>
+
+
+    <!-- หน้าแรก -->
+    <section id="home">
+
+        <h1>ยินดีต้อนรับสู่</h1>
+
+        <h2>โปรไฟล์ของฉัน</h2>
+
+        <p>
+            สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
+            ขณะนี้กำลังศึกษา/สนใจด้าน Computer Science & Engineering
+        </p>
+
+        <!-- ปุ่มเปลี่ยนหน้า -->
+        <a href="portfolio.html" class="portfolio-btn">
+            📁 เข้าดูแฟ้มผลงาน
+        </a>
+
+    </section>
+
+
+    <!-- ประวัติส่วนตัว -->
+    <section id="profile">
+
+        <div class="card">
+
+            <img src="images.jpg"
+                 alt="รูปโปรไฟล์ ภานุพงศ์"
+                 class="profile-img">
+
+            <h2>ประวัติส่วนตัว</h2>
+
+            <div class="info-item">
+                <strong>ชื่อ-นามสกุล:</strong>
+                นาย ภานุพงศ์ บัวทอง
+            </div>
+
+            <div class="info-item">
+                <strong>ชื่อเล่น:</strong>
+                ไอซ์
+            </div>
+
+            <div class="info-item">
+                <strong>วันเกิด:</strong>
+                11/09/51
+            </div>
+
+            <div class="info-item">
+                <strong>ความสนใจ:</strong>
+                วิทยาการคอมพิวเตอร์และวิศวกรรม
+                (Computer Science & Engineering)
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
+    </footer>
+
+</body>
 </html>        }
 
         nav a {
