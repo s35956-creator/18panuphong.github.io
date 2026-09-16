@@ -1,9 +1,9 @@
+
 <!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>โปรไฟล์ของฉัน - ภานุพงศ์ บัวทอง</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
@@ -18,17 +18,15 @@
         }
 
         body {
-            background-color: #0f172a;
+            background: #0f172a;
             color: #f8fafc;
         }
-
-        /* ================= NAVBAR ================= */
 
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 23, 42, 0.9);
+            background: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             display: flex;
             justify-content: space-between;
@@ -60,8 +58,6 @@
             color: #38bdf8;
         }
 
-        /* ================= SECTION ================= */
-
         section {
             min-height: 100vh;
             display: flex;
@@ -72,14 +68,8 @@
             text-align: center;
         }
 
-        /* ================= HOME ================= */
-
         #home {
-            background: linear-gradient(
-                135deg,
-                #0f172a 0%,
-                #1e1b4b 100%
-            );
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
         }
 
         #home h1 {
@@ -100,8 +90,6 @@
             line-height: 1.6;
         }
 
-        /* ================= BUTTON ================= */
-
         .button-group {
             display: flex;
             gap: 15px;
@@ -110,8 +98,7 @@
             justify-content: center;
         }
 
-        .portfolio-btn,
-        .goal-btn {
+        .btn {
             display: inline-block;
             padding: 13px 30px;
             text-decoration: none;
@@ -120,32 +107,25 @@
             transition: 0.3s;
         }
 
-        .portfolio-btn {
+        .primary-btn {
             background: #38bdf8;
             color: #0f172a;
         }
 
-        .portfolio-btn:hover {
-            background: #7dd3fc;
-            transform: translateY(-3px);
-        }
-
-        .goal-btn {
+        .secondary-btn {
             background: transparent;
             color: #38bdf8;
             border: 1px solid #38bdf8;
         }
 
-        .goal-btn:hover {
-            background: #38bdf8;
-            color: #0f172a;
+        .btn:hover {
             transform: translateY(-3px);
+            background: #7dd3fc;
+            color: #0f172a;
         }
 
-        /* ================= PROFILE ================= */
-
         #profile {
-            background-color: #1e293b;
+            background: #1e293b;
         }
 
         .card {
@@ -188,8 +168,6 @@
             color: #94a3b8;
         }
 
-        /* ================= FOOTER ================= */
-
         footer {
             text-align: center;
             padding: 20px;
@@ -197,10 +175,7 @@
             color: #64748b;
         }
 
-        /* ================= MOBILE ================= */
-
         @media (max-width: 700px) {
-
             nav {
                 flex-direction: column;
                 gap: 10px;
@@ -229,48 +204,26 @@
 
 <body>
 
-    <!-- ================= NAVBAR ================= -->
+    <!-- NAVBAR -->
 
     <nav>
-
-        <div class="logo">
-            Panupong.Dev
-        </div>
+        <div class="logo">Panupong.Dev</div>
 
         <ul class="nav-links">
-
-            <li>
-                <a href="#home">หน้าแรก</a>
-            </li>
-
-            <li>
-                <a href="#profile">ประวัติส่วนตัว</a>
-            </li>
-
-            <li>
-                <a href="goal.html">เป้าหมาย</a>
-            </li>
-
-            <li>
-                <a href="portfolio.html">แฟ้มสะสมงาน</a>
-            </li>
-
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="index.html#profile">ประวัติส่วนตัว</a></li>
+            <li><a href="goal.html">เป้าหมาย</a></li>
+            <li><a href="portfolio.html">แฟ้มสะสมงาน</a></li>
+            <li><a href="contact.html">ติดต่อฉัน</a></li>
         </ul>
-
     </nav>
 
-
-    <!-- ================= HOME ================= -->
+    <!-- HOME -->
 
     <section id="home">
+        <h1>ยินดีต้อนรับสู่</h1>
 
-        <h1>
-            ยินดีต้อนรับสู่
-        </h1>
-
-        <h2>
-            โปรไฟล์ของฉัน
-        </h2>
+        <h2>โปรไฟล์ของฉัน</h2>
 
         <p>
             สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
@@ -278,37 +231,31 @@
             Computer Science & Engineering
         </p>
 
-
         <div class="button-group">
-
-            <a href="goal.html" class="goal-btn">
+            <a href="goal.html" class="btn secondary-btn">
                 🎯 เป้าหมายของฉัน
             </a>
 
-            <a href="portfolio.html" class="portfolio-btn">
-                📁 เข้าดูแฟ้มผลงาน
+            <a href="portfolio.html" class="btn primary-btn">
+                📁 แฟ้มสะสมงาน
             </a>
 
+            <a href="contact.html" class="btn secondary-btn">
+                📞 ติดต่อฉัน
+            </a>
         </div>
-
     </section>
 
-
-    <!-- ================= PROFILE ================= -->
+    <!-- PROFILE -->
 
     <section id="profile">
-
         <div class="card">
 
-            <img
-                src="images.jpg"
-                alt="รูปโปรไฟล์ ภานุพงศ์"
-                class="profile-img"
-            >
+            <img src="images.jpg"
+                 alt="รูปโปรไฟล์ ภานุพงศ์"
+                 class="profile-img">
 
-            <h2>
-                ประวัติส่วนตัว
-            </h2>
+            <h2>ประวัติส่วนตัว</h2>
 
             <div class="info-item">
                 <strong>ชื่อ-นามสกุล:</strong>
@@ -332,18 +279,12 @@
             </div>
 
         </div>
-
     </section>
 
-
-    <!-- ================= FOOTER ================= -->
+    <!-- FOOTER -->
 
     <footer>
-
-        <p>
-            &copy; ภานุพงศ์ บัวทอง - All Rights Reserved
-        </p>
-
+        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
     </footer>
 
 </body>
