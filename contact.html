@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ติดต่อฉัน - ภานุพงศ์ บัวทอง</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+            color: #f8fafc;
+            min-height: 100vh;
+        }
+
+        nav {
+            background: rgba(15, 23, 42, 0.95);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        .contact-section {
+            min-height: calc(100vh - 70px);
+            padding: 80px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            color: #38bdf8;
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            padding: 35px;
+            width: 100%;
+            max-width: 550px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .contact-card h2 {
+            color: #38bdf8;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .contact-item {
+            padding: 18px 0;
+            border-bottom: 1px solid #1e293b;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .contact-item strong {
+            color: #94a3b8;
+            display: block;
+        }
+
+        .contact-item a {
+            color: #38bdf8;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+
+        .contact-item a:hover {
+            color: #7dd3fc;
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 12px 25px;
+            border: 1px solid #38bdf8;
+            border-radius: 10px;
+            color: #38bdf8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #38bdf8;
+            color: #0f172a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #090d16;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .contact-card {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="logo">Panupong.Dev</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">หน้าแรก</a></li>
+            <li><a href="index.html#profile">ประวัติส่วนตัว</a></li>
+            <li><a href="goal.html">เป้าหมาย</a></li>
+            <li><a href="portfolio.html">แฟ้มสะสมงาน</a></li>
+            <li><a href="contact.html">ติดต่อฉัน</a></li>
+        </ul>
+    </nav>
+
+    <!-- CONTACT PAGE -->
+
+    <section class="contact-section">
+
+        <h1>📞 ติดต่อฉัน</h1>
+
+        <div class="contact-card">
+
+            <h2>ช่องทางการติดต่อ</h2>
+
+            <div class="contact-item">
+                <strong>📧 อีเมล</strong>
+                <a href="mailto:s35956@banbung.ac.th">
+                    s35956@banbung.ac.th
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>📞 เบอร์โทรศัพท์</strong>
+                <a href="tel:0636581840">
+                    0636581840
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>📘 Facebook</strong>
+                <span>Panupong Buathong</span>
+            </div>
+
+            <div class="contact-item">
+                <strong>📸 Instagram</strong>
+                <a href="https://www.instagram.com/px_pxnupxng/"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    @px_pxnupxng
+                </a>
+            </div>
+
+            <a href="index.html" class="back-btn">
+                🏠 กลับหน้าแรก
+            </a>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
