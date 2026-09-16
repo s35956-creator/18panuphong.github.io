@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>โปรไฟล์ของฉัน - ภานุพงศ์ บัวทอง</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
@@ -21,6 +22,8 @@
             background: #0f172a;
             color: #f8fafc;
         }
+
+        /* ================= NAVBAR ================= */
 
         nav {
             position: fixed;
@@ -58,6 +61,8 @@
             color: #38bdf8;
         }
 
+        /* ================= SECTION ================= */
+
         section {
             min-height: 100vh;
             display: flex;
@@ -67,6 +72,8 @@
             padding: 100px 20px 40px;
             text-align: center;
         }
+
+        /* ================= HOME ================= */
 
         #home {
             background: linear-gradient(135deg, #0f172a, #1e1b4b);
@@ -89,6 +96,8 @@
             max-width: 600px;
             line-height: 1.6;
         }
+
+        /* ================= BUTTONS ================= */
 
         .button-group {
             display: flex;
@@ -124,6 +133,8 @@
             color: #0f172a;
         }
 
+        /* ================= PROFILE ================= */
+
         #profile {
             background: #1e293b;
         }
@@ -132,7 +143,7 @@
             background: #0f172a;
             padding: 40px;
             border-radius: 16px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
             border: 1px solid #334155;
             max-width: 550px;
             width: 100%;
@@ -169,12 +180,16 @@
             color: #94a3b8;
         }
 
+        /* ================= FOOTER ================= */
+
         footer {
             text-align: center;
             padding: 20px;
             background: #090d16;
             color: #64748b;
         }
+
+        /* ================= MOBILE ================= */
 
         @media (max-width: 700px) {
             nav {
@@ -205,34 +220,66 @@
 
 <body>
 
-    <!-- NAVBAR -->
+    <!-- ================= NAVBAR ================= -->
 
     <nav>
-        <div class="logo">Panupong.Dev</div>
+        <div class="logo">
+            Panupong.Dev
+        </div>
 
         <ul class="nav-links">
-            <li><a href="index.html">หน้าแรก</a></li>
-            <li><a href="#profile">ประวัติส่วนตัว</a></li>
-            <li><a href="goal.html">เป้าหมาย</a></li>
-            <li><a href="portfolio.html">แฟ้มสะสมงาน</a></li>
-            <li><a href="contact.html">ติดต่อ</a></li>
+
+            <li>
+                <a href="index.html">หน้าแรก</a>
+            </li>
+
+            <li>
+                <a href="#profile">ประวัติส่วนตัว</a>
+            </li>
+
+            <li>
+                <a href="education.html">ประวัติการศึกษา</a>
+            </li>
+
+            <li>
+                <a href="goal.html">เป้าหมาย</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">แฟ้มสะสมงาน</a>
+            </li>
+
+            <li>
+                <a href="contact.html">ติดต่อฉัน</a>
+            </li>
+
         </ul>
     </nav>
 
-    <!-- HOME -->
+    <!-- ================= HOME ================= -->
 
     <section id="home">
-        <h1>ยินดีต้อนรับสู่</h1>
 
-        <h2>โปรไฟล์ของฉัน</h2>
+        <h1>
+            ยินดีต้อนรับสู่
+        </h1>
+
+        <h2>
+            โปรไฟล์ของฉัน
+        </h2>
 
         <p>
             สวัสดีครับ! ผมชื่อ ภานุพงศ์ (Panupong)
-            ขณะนี้กำลังศึกษา/สนใจด้าน
+            ขณะนี้กำลังศึกษาและสนใจด้าน
             Computer Science & Engineering
         </p>
 
         <div class="button-group">
+
+            <a href="education.html" class="btn secondary-btn">
+                🎓 ประวัติการศึกษา
+            </a>
+
             <a href="goal.html" class="btn secondary-btn">
                 🎯 เป้าหมายของฉัน
             </a>
@@ -242,21 +289,28 @@
             </a>
 
             <a href="contact.html" class="btn secondary-btn">
-                📞 ติดต่อ
+                📞 ติดต่อฉัน
             </a>
+
         </div>
+
     </section>
 
-    <!-- PROFILE -->
+    <!-- ================= PROFILE ================= -->
 
     <section id="profile">
+
         <div class="card">
 
-            <img src="images.jpg"
-                 alt="รูปโปรไฟล์ ภานุพงศ์"
-                 class="profile-img">
+            <img
+                src="images.jpg"
+                alt="รูปโปรไฟล์ ภานุพงศ์"
+                class="profile-img"
+            >
 
-            <h2>ประวัติส่วนตัว</h2>
+            <h2>
+                ประวัติส่วนตัว
+            </h2>
 
             <div class="info-item">
                 <strong>ชื่อ-นามสกุล:</strong>
@@ -279,20 +333,21 @@
                 (Computer Science & Engineering)
             </div>
 
-            <!-- งานอดิเรก -->
-
             <div class="info-item">
                 <strong>งานอดิเรก:</strong>
                 เล่นเกม เล่นกีฬา และดูหนัง
             </div>
 
         </div>
+
     </section>
 
-    <!-- FOOTER -->
+    <!-- ================= FOOTER ================= -->
 
     <footer>
-        <p>&copy; ภานุพงศ์ บัวทอง - All Rights Reserved</p>
+        <p>
+            &copy; ภานุพงศ์ บัวทอง - All Rights Reserved
+        </p>
     </footer>
 
 </body>
