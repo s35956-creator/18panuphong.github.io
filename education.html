@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ประวัติการศึกษา - ภานุพงศ์ บัวทอง</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Kanit', sans-serif;
+        }
+
+        body {
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+            z-index: 1000;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .logo {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #38bdf8;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+        .education-section {
+            min-height: 100vh;
+            padding: 120px 20px 60px;
+            background: linear-gradient(135deg, #0f172a, #1e1b4b);
+        }
+
+        .education-container {
+            max-width: 850px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .education-container h1 {
+            color: #38bdf8;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #cbd5e1;
+            margin-bottom: 40px;
+        }
+
+        .education-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .education-card {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 18px;
+            padding: 30px;
+            text-align: left;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+        }
+
+        .education-card:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+
+        .education-icon {
+            min-width: 75px;
+            height: 75px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 2px solid #38bdf8;
+            border-radius: 50%;
+            font-size: 2.3rem;
+            background: #111c3d;
+        }
+
+        .education-content h2 {
+            color: #38bdf8;
+            font-size: 1.4rem;
+            margin-bottom: 8px;
+        }
+
+        .education-content p {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .education-content strong {
+            color: #f8fafc;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 12px 28px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .back-btn:hover {
+            background: #7dd3fc;
+            transform: translateY(-3px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #090d16;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .nav-links {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .education-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 25px 20px;
+            }
+
+            .education-container h1 {
+                font-size: 2.1rem;
+            }
+
+            .education-content h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+        <div class="logo">
+            Panupong.Dev
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">หน้าแรก</a>
+            </li>
+
+            <li>
+                <a href="index.html#profile">ประวัติส่วนตัว</a>
+            </li>
+
+            <li>
+                <a href="education.html">ประวัติการศึกษา</a>
+            </li>
+
+            <li>
+                <a href="goal.html">เป้าหมาย</a>
+            </li>
+
+            <li>
+                <a href="portfolio.html">แฟ้มสะสมงาน</a>
+            </li>
+
+            <li>
+                <a href="contact.html">ติดต่อฉัน</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- EDUCATION PAGE -->
+
+    <section class="education-section">
+
+        <div class="education-container">
+
+            <h1>🎓 ประวัติการศึกษา</h1>
+
+            <p class="subtitle">
+                เส้นทางการศึกษาของภานุพงศ์ บัวทอง
+            </p>
+
+            <div class="education-list">
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        🧸
+                    </div>
+
+                    <div class="education-content">
+                        <h2>ระดับอนุบาล</h2>
+
+                        <p>
+                            ศึกษาระดับอนุบาลที่
+                            <strong>โรงเรียนวัดป่าไผ่</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        📚
+                    </div>
+
+                    <div class="education-content">
+                        <h2>ระดับประถมศึกษา</h2>
+
+                        <p>
+                            ศึกษาระดับประถมศึกษาที่
+                            <strong>โรงเรียนวัดป่าไผ่</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        🏫
+                    </div>
+
+                    <div class="education-content">
+                        <h2>ระดับมัธยมศึกษาตอนต้น</h2>
+
+                        <p>
+                            ศึกษาระดับมัธยมศึกษาตอนต้นที่
+                            <strong>
+                                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="education-card">
+                    <div class="education-icon">
+                        🎓
+                    </div>
+
+                    <div class="education-content">
+                        <h2>ระดับมัธยมศึกษาตอนปลาย</h2>
+
+                        <p>
+                            ศึกษาระดับมัธยมศึกษาตอนปลายที่
+                            <strong>
+                                โรงเรียนบ้านบึง "อุตสาหกรรมนุเคราะห์"
+                            </strong>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <a href="index.html" class="back-btn">
+                🏠 กลับหน้าหลัก
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>
+            &copy; ภานุพงศ์ บัวทอง - All Rights Reserved
+        </p>
+    </footer>
+
+</body>
+</html>
