@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
 
     <style>
+
         * {
             margin: 0;
             padding: 0;
@@ -20,6 +21,8 @@
             background: #0f172a;
             color: #f8fafc;
         }
+
+        /* ================= NAVBAR ================= */
 
         nav {
             background: rgba(15, 23, 42, 0.95);
@@ -40,11 +43,14 @@
         nav a {
             color: #94a3b8;
             text-decoration: none;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #38bdf8;
         }
+
+        /* ================= CONTAINER ================= */
 
         .container {
             min-height: 100vh;
@@ -63,14 +69,17 @@
             margin-bottom: 40px;
         }
 
+        /* ================= PORTFOLIO GRID ================= */
+
         .portfolio-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-
-            max-width: 1000px;
+            max-width: 1200px;
             margin: auto;
         }
+
+        /* ================= CARD ================= */
 
         .portfolio-card {
             background: #1e293b;
@@ -78,16 +87,22 @@
             border-radius: 15px;
             border: 1px solid #334155;
             transition: 0.3s;
+            text-align: left;
         }
 
         .portfolio-card:hover {
             transform: translateY(-5px);
             border-color: #38bdf8;
+            box-shadow: 0 10px 25px rgba(56, 189, 248, 0.15);
         }
 
         .portfolio-card h2 {
             margin-bottom: 15px;
+            text-align: center;
+            color: #f8fafc;
         }
+
+        /* ================= IMAGE ================= */
 
         .portfolio-img {
             width: 100%;
@@ -95,47 +110,122 @@
             object-fit: cover;
             border-radius: 10px;
             margin-bottom: 15px;
+            display: block;
+            border: 1px solid #334155;
         }
 
-        .portfolio-card p {
-            color: #94a3b8;
+        /* รูปของผลงานที่ 3 */
+
+        .work3-images {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 20px;
         }
+
+        .work3-images img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .work3-images img:hover {
+            border-color: #38bdf8;
+        }
+
+        /* ================= TEXT ================= */
+
+        .portfolio-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .portfolio-card strong {
+            color: #38bdf8;
+        }
+
+        /* ================= BACK BUTTON ================= */
 
         .back-btn {
             display: inline-block;
             margin-top: 40px;
             padding: 12px 28px;
-
             background: #38bdf8;
             color: #0f172a;
-
             text-decoration: none;
             border-radius: 8px;
             font-weight: 600;
+            transition: 0.3s;
         }
 
         .back-btn:hover {
             background: #7dd3fc;
+            transform: translateY(-2px);
         }
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 700px) {
+
+            .container {
+                padding: 70px 15px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-img {
+                height: auto;
+                max-height: 450px;
+                object-fit: contain;
+            }
+
+            .work3-images {
+                grid-template-columns: 1fr;
+            }
+
+            .work3-images img {
+                height: auto;
+                max-height: 450px;
+                object-fit: contain;
+            }
+        }
+
     </style>
 </head>
 
 <body>
 
-    <!-- เมนู -->
+    <!-- ================= NAVBAR ================= -->
+
     <nav>
-        <div class="logo">Panupong.Dev</div>
+
+        <div class="logo">
+            Panupong.Dev
+        </div>
 
         <a href="index.html">
             ← กลับหน้าแรก
         </a>
+
     </nav>
 
 
-    <!-- แฟ้มผลงาน -->
+    <!-- ================= PORTFOLIO ================= -->
+
     <div class="container">
 
-        <h1>📁 แฟ้มสะสมงาน</h1>
+        <h1>
+            📁 แฟ้มสะสมงาน
+        </h1>
 
         <p class="subtitle">
             ผลงานและเกียรติบัตรของ ภานุพงศ์ บัวทอง
@@ -144,58 +234,165 @@
 
         <div class="portfolio-grid">
 
-            <!-- ผลงานที่ 1 -->
+
+            <!-- ================= ผลงานที่ 1 ================= -->
+
             <div class="portfolio-card">
 
-                <h2>🏆 กิจกรรม / เกียรติบัตร</h2>
+                <h2>
+                    🏆 กิจกรรม / เกียรติบัตร
+                </h2>
 
-                <img src="37584.jpg"
-                     alt="เกียรติบัตร"
-                     class="portfolio-img">
+                <img
+                    src="37584.jpg"
+                    alt="เกียรติบัตรกิจกรรมด้านเทคโนโลยี"
+                    class="portfolio-img"
+                >
 
                 <p>
                     เกียรติบัตรเข้าร่วมนิทรรศการ
                     และกิจกรรมด้านเทคโนโลยี
                 </p>
+
                 <p>
-                    เนื่องในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ประจำปีการศึกษา 2569 เพื่อส่งเสริมความรู้และทักษะด้านวิทยาศาสตร์ เทคโนโลยี และนวัตกรรม
-                    ประโยชน์ที่ได้รับ : ได้เพิ่มพูนความรู้ด้านวิทยาศาสตร์และเทคโนโลยีได้เรียนรู้การใช้เทคโนโลยีและ AI อย่างเหมาะสมและปลอดภัย
-                    ได้พัฒนาทักษะการใช้เทคโนโลยีในชีวิตประจำวัน
-                    ได้เปิดมุมมองและความสนใจเกี่ยวกับนวัตกรรมและเทคโนโลยีสมัยใหม่
-                    ได้ฝึกการเรียนรู้จากกิจกรรมและนิทรรศการ
-                    สามารถนำประสบการณ์ไปต่อยอดในการเรียนและการทำงานด้านเทคโนโลยีในอนาคต
+                    เนื่องในงานสัปดาห์วิทยาศาสตร์แห่งชาติ
+                    ประจำปีการศึกษา 2569
+                    เพื่อส่งเสริมความรู้และทักษะ
+                    ด้านวิทยาศาสตร์ เทคโนโลยี และนวัตกรรม
                 </p>
+
+                <p>
+                    <strong>ประโยชน์ที่ได้รับ :</strong><br>
+                    ได้เพิ่มพูนความรู้ด้านวิทยาศาสตร์
+                    และเทคโนโลยี
+                    ได้เรียนรู้การใช้เทคโนโลยีและ AI
+                    อย่างเหมาะสมและปลอดภัย
+                    ได้พัฒนาทักษะการใช้เทคโนโลยี
+                    ในชีวิตประจำวัน
+                    ได้เปิดมุมมองเกี่ยวกับนวัตกรรม
+                    และเทคโนโลยีสมัยใหม่
+                    และสามารถนำประสบการณ์ไปต่อยอด
+                    ในการเรียนและการทำงาน
+                    ด้านเทคโนโลยีในอนาคต
+                </p>
+
             </div>
 
 
-            <!-- ผลงานที่ 2 -->
+            <!-- ================= ผลงานที่ 2 ================= -->
+
             <div class="portfolio-card">
 
-                <h2>🏆 กิจกรรม / เกียรติบัตร</h2>
+                <h2>
+                    🏆 กิจกรรม / เกียรติบัตร
+                </h2>
 
-                <img src="37862.jpg"
-                     alt="เกียรติบัตร"
-                     class="portfolio-img">
+                <img
+                    src="37862.jpg"
+                    alt="เกียรติบัตรการป้องกันการทุจริต"
+                    class="portfolio-img"
+                >
 
                 <p>
-                    เกียรติบัตรเข้าร่วมอบรมการป้องกันการทุจริต
+                    เกียรติบัตรเข้าร่วมอบรม
+                    การป้องกันการทุจริต
                 </p>
+
                 <p>
-                    ประโยชน์ที่ได้รับ
-ได้ความรู้เกี่ยวกับการป้องกันและต่อต้านการทุจริต
-ได้เรียนรู้เรื่องคุณธรรม จริยธรรม และความซื่อสัตย์
-สามารถนำความรู้ไปใช้ในการดำเนินชีวิตประจำวันได้
-ช่วยสร้างจิตสำนึกในการเป็นพลเมืองที่ดีและรับผิดชอบต่อสังคม
-สามารถนำเกียรติบัตรไปใช้ประกอบ Portfolio เพื่อแสดงถึงความสนใจด้านคุณธรรมและสังคม
+                    <strong>ประโยชน์ที่ได้รับ :</strong><br>
+                    ได้ความรู้เกี่ยวกับการป้องกัน
+                    และต่อต้านการทุจริต
+                    ได้เรียนรู้เรื่องคุณธรรม จริยธรรม
+                    และความซื่อสัตย์
+                    สามารถนำความรู้ไปใช้
+                    ในการดำเนินชีวิตประจำวันได้
+                    ช่วยสร้างจิตสำนึกในการเป็น
+                    พลเมืองที่ดีและรับผิดชอบต่อสังคม
+                    และสามารถนำเกียรติบัตร
+                    ไปใช้ประกอบ Portfolio
                 </p>
 
             </div>
+
+
+            <!-- ================= ผลงานที่ 3 ================= -->
+
+            <div class="portfolio-card">
+
+                <h2>
+                    🏆 กิจกรรม / เกียรติบัตร
+                </h2>
+
+
+                <!-- รูปผลงานที่ 3 จำนวน 2 รูป -->
+
+                <div class="work3-images">
+
+                    <!-- รูปกิจกรรม -->
+
+                    <img
+                        src="work3.jpg"
+                        alt="รูปกิจกรรมผลงานที่ 3"
+                    >
+
+                    <!-- รูปเกียรติบัตร -->
+
+                    <img
+                        src="certificate3.jpg"
+                        alt="เกียรติบัตรผลงานที่ 3"
+                    >
+
+                </div>
+
+
+                <p>
+                    เกียรติบัตรและกิจกรรม
+                    ที่เข้าร่วมเพื่อพัฒนาความรู้
+                    และทักษะ
+                </p>
+
+
+                <p>
+                    การเข้าร่วมกิจกรรมช่วยส่งเสริม
+                    ความรู้ ความสามารถ
+                    และประสบการณ์ใหม่ ๆ
+                    รวมถึงเปิดโอกาสให้ได้เรียนรู้
+                    จากการปฏิบัติจริง
+                    และสามารถนำความรู้ที่ได้รับ
+                    ไปประยุกต์ใช้ในการเรียน
+                    และการดำเนินชีวิต
+                </p>
+
+
+                <p>
+                    <strong>ประโยชน์ที่ได้รับ :</strong><br>
+
+                    ได้รับความรู้และประสบการณ์เพิ่มเติม
+
+                    ได้ฝึกทักษะการเรียนรู้
+                    และการทำงานร่วมกับผู้อื่น
+
+                    ได้พัฒนาความรับผิดชอบ
+                    และความมีระเบียบวินัย
+
+                    ได้เรียนรู้จากประสบการณ์จริง
+
+                    สามารถนำความรู้ไปต่อยอด
+                    ในการเรียนและการทำงานในอนาคต
+                </p>
+
+            </div>
+
 
         </div>
 
 
-        <!-- ปุ่มกลับ -->
-        <a href="index.html" class="back-btn">
+        <!-- ================= BACK BUTTON ================= -->
+
+        <a
+            href="index.html"
+            class="back-btn"
+        >
             ← กลับหน้าแรก
         </a>
 
